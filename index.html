@@ -133,5 +133,35 @@
     </nav>
     <span>© 2026 Nexo Tech</span>
   </footer>
+
+  <div class="chatbot">
+    <section class="chat-panel" id="chat-panel" aria-labelledby="chat-title" hidden>
+      <header class="chat-header">
+        <div>
+          <span class="chat-status"><span aria-hidden="true"></span> En línea</span>
+          <h2 id="chat-title">Asistente Nexo Tech</h2>
+        </div>
+        <button class="chat-close" type="button" aria-label="Cerrar chat">×</button>
+      </header>
+      <div class="chat-messages" id="chat-messages" aria-live="polite" aria-relevant="additions">
+        <div class="chat-message chat-message-bot">¡Hola! Puedo ayudarte con información sobre nuestros servicios y cómo contactarnos.</div>
+        <div class="chat-suggestions" aria-label="Preguntas sugeridas">
+          <button type="button">¿Qué servicios ofrecen?</button>
+          <button type="button">¿Qué tipo de software desarrollan?</button>
+          <button type="button">¿Cómo puedo contactarlos?</button>
+        </div>
+      </div>
+      <form class="chat-form">
+        <label class="visually-hidden" for="chat-input">Escribe tu pregunta</label>
+        <input id="chat-input" name="message" type="text" placeholder="Escribe tu pregunta..." autocomplete="off" required>
+        <button type="submit" aria-label="Enviar mensaje"><span aria-hidden="true">↑</span></button>
+      </form>
+    </section>
+    <button class="chat-toggle" type="button" aria-controls="chat-panel" aria-expanded="false" aria-label="Abrir chat">
+      <span class="chat-toggle-icon" aria-hidden="true">✳</span>
+      <span class="chat-toggle-label">¿Te ayudamos?</span>
+    </button>
+  </div>
+  <script src="chatbot.js" defer></script>
 </body>
 </html>
